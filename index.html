@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .button {
+            transition: transform 0.2s, background-color 0.3s;
+        }
+        .button:hover {
+            transform: scale(1.05);
+        }
+        .shadow-card {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .ring-button {
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .ring-button:hover {
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center min-h-screen">
+    <div class="bg-white rounded-lg shadow-card p-8 w-full max-w-sm">
+        <div id="display" class="text-5xl font-mono text-center mb-6 text-gray-800">00:00:00.00</div>
+        <div class="flex justify-center space-x-4 mb-6">
+            <button id="startPause" class="button ring-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full focus:outline-none">Start</button>
+            <button id="reset" class="button ring-button bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full focus:outline-none">Reset</button>
+            <button id="lap" class="button ring-button bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full focus:outline-none">Lap</button>
+        </div>
+        <div class="overflow-y-auto max-h-40 border-t border-gray-300 pt-4" id="laps"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
