@@ -1,2 +1,4 @@
 # PRODIGY_WD_02
-project of web development internship at Prodigy
+
+### Stop Watch
+a stop watch made by using html, css, javascript
